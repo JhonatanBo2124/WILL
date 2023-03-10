@@ -13,7 +13,17 @@ function numeroSimetrico(num) {
   // numeroSimetrico(11711) devuelve true
 
   // Tu código:
-
+  var digitos = num.toString().split('');
+   var esCorrecto = true;
+   for (let i = 0; i < digitos.length; i++)
+   {
+      var w = (digitos.length - 1) - i;
+      if (digitos[i] != digitos[w])
+         {
+          esCorrecto = false;
+         }
+   }
+   return esCorrecto;
 }
 
 // No modifiques nada debajo de esta linea //
